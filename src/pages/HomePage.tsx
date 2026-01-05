@@ -73,7 +73,7 @@ export function HomePage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              here
+              <u>here</u>
             </a>
             .
           </p>
@@ -157,7 +157,7 @@ export function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h4>Full resume</h4>
+            <h4><u>Full resume</u></h4>
           </a>
         </div>
       </aside>
