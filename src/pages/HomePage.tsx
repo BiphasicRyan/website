@@ -104,7 +104,7 @@ export function HomePage() {
             feature across core shopping flows, including the development of
             novel product capabilities. I decomposed backend services to improve
             extensibility and optimized the cache by adjusting cache admission
-            policy to only retain entries with demonstratlue use potential to
+            policy to only retain entries with demonstrated use potential.
           </p>
         </div>
 
