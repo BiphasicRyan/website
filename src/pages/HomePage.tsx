@@ -52,9 +52,9 @@ export function HomePage() {
         </a>
         <section className="about">
           <p>
-            I'm a Software Development Engineer at Amazon in New York, where I
-            build and scale customer facing systems. Most recently, I worked on
-            the backend of an AI-powered shopping feature delivered through the
+            I'm a Software Engineer at Amazon in New York, where I build and
+            scale customer facing systems. Most recently, I worked on the
+            backend of an AI-powered shopping feature delivered through the
             Amazon mobile app.
           </p>
           <p>
@@ -87,7 +87,7 @@ export function HomePage() {
 
         <div className="resumeItem">
           <div className="jobHeader">
-            <div className="jobTitle">Software Development Engineer</div>
+            <div className="jobTitle">Software Engineer</div>
             <div className="jobMeta">New York, NY</div>
             <div className="jobMeta">August 2025 - Current</div>
           </div>
@@ -110,7 +110,7 @@ export function HomePage() {
 
         <div className="resumeItem">
           <div className="jobHeader">
-            <div className="jobTitle">Software Development Engineer Intern</div>
+            <div className="jobTitle">Software Engineer Intern</div>
             <div className="jobMeta">New York, NY</div>
             <div className="jobMeta">May 2024 - August 2024</div>
           </div>
@@ -157,7 +157,9 @@ export function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h4><u>Full resume</u></h4>
+            <h4>
+              <u>Full resume</u>
+            </h4>
           </a>
         </div>
       </aside>
