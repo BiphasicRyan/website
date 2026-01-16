@@ -475,6 +475,24 @@ h2 {
   font-size: 0.9rem;
   color: var(--muted);
   text-align: center;
+  white-space: pre-line;
+}
+
+.imageLocation {
+  color: var(--muted);
+}
+
+.imageCaptionDivider {
+  display: block;
+  width: min(260px, 70%);
+  height: 1px;
+  margin: 6px auto;
+  background: var(--border);
+  opacity: 0.7;
+}
+
+.imageCaption {
+  color: var(--muted);
 }
 
 /* Projects page */
