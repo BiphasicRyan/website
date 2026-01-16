@@ -37,6 +37,8 @@ body {
   min-height: 100vh;
   background-color: var(--bg);
   color: var(--text);
+  
+  caret-color: transparent;
 }
 
 h1 {
