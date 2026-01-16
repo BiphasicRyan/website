@@ -29,4 +29,11 @@ export const favoriteImages: FavoriteImage[] = [
       "NYC, 1 and 2 Manhattan West | New York looks like gotham when it rains",
         // photo source: taken by me
   },
+  {
+    src: "West 30th Street.jpg",
+    alt: "West 30th Street",
+    description:
+      "NYC, West 30th Street | A morning so ethereal it can't be captured by a camera",
+        // photo source: taken by me
+  }
 ];
