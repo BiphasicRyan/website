@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 export function ProjectsPage() {
   return (
     <section className="text-center" aria-label="Projects">
-      <h3 className="mb-6">Some thoughts ...</h3>
+      <h3 className="mb-6">Some ideas ...</h3>
 
       <div className="flex flex-col gap-3.5 max-w-[760px] mx-auto">
         {projects.map((p) => (
