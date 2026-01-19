@@ -70,7 +70,8 @@ export function WritingPage() {
             aria-label={`Open post: ${post.title}`}
           >
             <div className="flex items-baseline justify-start flex-wrap">
-              <span className="font-medium">{post.title} |&nbsp;</span>
+              <span className="font-bold">{post.title}</span>
+              <span>&nbsp;|&nbsp;</span>
               {post.date ? (
                 <span className="text-muted text-[0.9rem]">{post.date}</span>
               ) : null}

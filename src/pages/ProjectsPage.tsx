@@ -13,7 +13,7 @@ export function ProjectsPage() {
             key={`${p.title}-${p.date}`}
           >
             <header className="flex items-baseline justify-between gap-3.5 max-sm:flex-col max-sm:items-start max-sm:gap-1.5">
-              <h4 className="m-0">{p.title}</h4>
+              <h4 className="m-0 font-bold">{p.title}</h4>
               <time
                 className="whitespace-nowrap text-muted text-[0.95rem]"
                 dateTime={p.date}
