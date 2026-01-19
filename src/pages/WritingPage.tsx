@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { posts } from "../writing/posts/index";
 
 export function WritingPage() {
-
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -36,41 +35,48 @@ export function WritingPage() {
 
   if (activePost) {
     return (
-      <section className="writing" aria-label="Writing post">
+      <section className="text-center" aria-label="Writing post">
         <button
           type="button"
-          className="writingBack"
+          className="px-3 py-2 rounded-lg border border-border bg-transparent text-text cursor-pointer font-[inherit] hover:border-text"
           onClick={handleBackClick}
         >
           ← Back to writing
         </button>
 
-        <header className="postHeader">
-          <h3 className="postH1">{activePost.title}</h3>
-          {activePost.date ? <div className="postMeta">{activePost.date}</div> : null}
+        <header className="text-center mt-4">
+          <h3 className="m-0">{activePost.title}</h3>
+          {activePost.date ? (
+            <div className="text-muted text-[0.9rem]">{activePost.date}</div>
+          ) : null}
         </header>
 
-        <article className="postBody">{activePost.content}</article>
+        <article className="text-left mt-4">{activePost.content}</article>
       </section>
     );
   }
 
   return (
-    <section className="writing" aria-label="Writing posts">
-      <h3>Some thoughts ...</h3>
+    <section className="text-center" aria-label="Writing posts">
+      <h3 className="mb-6">Some thoughts ...</h3>
 
-      <ul className="postList">
+      <ul className="list-none m-0 p-0 flex flex-col items-center">
         {posts.map((post) => (
-          <li key={post.slug} className="postItem">
+          <li
+            key={post.slug}
+            className="list-none m-0 mb-3 w-full max-w-[760px]"
+          >
             <button
               type="button"
-              className="postCard"
+              className="w-full text-left border border-border bg-[color-mix(in_srgb,var(--bg)_88%,var(--text)_12%)] rounded-xl px-3.5 py-3 cursor-pointer font-[inherit] text-text"
               onClick={() => handlePostClick(post.slug)}
               aria-label={`Open post: ${post.title}`}
             >
-              <div className="postTitleRow">
-                <span className="postTitle">{post.title} | </span>
-                {post.date ? <span className="postDate">{post.date}</span> : null}
+              <div className="flex items-baseline justify-start flex-wrap">
+                <span className="font-medium">{post.title} |&nbsp;</span>
+                {post.date ? (
+                  <span className="text-muted text-[0.9rem]">{post.date}</span>
+                ) : null}
               </div>
             </button>
           </li>
