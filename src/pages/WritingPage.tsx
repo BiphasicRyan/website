@@ -60,28 +60,24 @@ export function WritingPage() {
     <section className="text-center" aria-label="Writing posts">
       <h3 className="mb-6">Some thoughts ...</h3>
 
-      <ul className="list-none m-0 p-0 flex flex-col items-center">
+      <div className="flex flex-col gap-3.5 max-w-[760px] mx-auto">
         {posts.map((post) => (
-          <li
+          <button
             key={post.slug}
-            className="list-none m-0 mb-3 w-full max-w-[760px]"
+            type="button"
+            className="text-left border border-border bg-[color-mix(in_srgb,var(--bg)_88%,var(--text)_12%)] rounded-xl px-3.5 py-3 cursor-pointer font-[inherit] text-text"
+            onClick={() => handlePostClick(post.slug)}
+            aria-label={`Open post: ${post.title}`}
           >
-            <button
-              type="button"
-              className="w-full text-left border border-border bg-[color-mix(in_srgb,var(--bg)_88%,var(--text)_12%)] rounded-xl px-3.5 py-3 cursor-pointer font-[inherit] text-text"
-              onClick={() => handlePostClick(post.slug)}
-              aria-label={`Open post: ${post.title}`}
-            >
-              <div className="flex items-baseline justify-start flex-wrap">
-                <span className="font-medium">{post.title} |&nbsp;</span>
-                {post.date ? (
-                  <span className="text-muted text-[0.9rem]">{post.date}</span>
-                ) : null}
-              </div>
-            </button>
-          </li>
+            <div className="flex items-baseline justify-start flex-wrap">
+              <span className="font-medium">{post.title} |&nbsp;</span>
+              {post.date ? (
+                <span className="text-muted text-[0.9rem]">{post.date}</span>
+              ) : null}
+            </div>
+          </button>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
