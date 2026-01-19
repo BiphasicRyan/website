@@ -58,10 +58,10 @@ export function Tabs({
   }
 
   return (
-    <div className="tabShell">
-      <div className="tabHeader">
+    <div className="w-full">
+      <div className="flex justify-center items-center gap-3 flex-wrap mb-4 max-sm:flex-col max-sm:items-stretch">
         <div
-          className="tabList"
+          className="flex gap-3 flex-wrap max-sm:w-full max-sm:justify-center"
           role="tablist"
           aria-label={ariaLabel}
           onKeyDown={onKeyDown}
@@ -80,7 +80,9 @@ export function Tabs({
                 id={tabId}
                 role="tab"
                 type="button"
-                className={`tab ${selected ? "tabActive" : ""}`}
+                className={`px-3 py-2 rounded-[10px] border border-border bg-transparent text-text cursor-pointer font-[inherit] hover:border-text focus-visible:outline-2 focus-visible:outline-text focus-visible:outline-offset-2 ${
+                  selected ? "border-text" : ""
+                }`}
                 aria-selected={selected}
                 aria-controls={panelId}
                 tabIndex={selected ? 0 : -1}
@@ -92,7 +94,11 @@ export function Tabs({
           })}
         </div>
 
-        {trailing ? <div className="tabTrailing">{trailing}</div> : null}
+        {trailing ? (
+          <div className="inline-flex items-center max-sm:w-full max-sm:flex-col max-sm:justify-center">
+            {trailing}
+          </div>
+        ) : null}
       </div>
 
       {tabs.map((tab) => {
@@ -107,7 +113,6 @@ export function Tabs({
             role="tabpanel"
             aria-labelledby={tabId}
             hidden={!selected}
-            className="tabPanel"
           >
             {selected ? tab.render() : null}
           </div>
