@@ -1,116 +1,89 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/*
+ * Theme CSS Variables
+ * Referenced by tailwind.config.js colors (bg, text, muted, border, link, etc.)
+ * Theme switcher changes data-theme on <html> to swap these values.
+ */
 
-  /* Theme defaults (dark) */
-  --bg: #000000;
-  --text: #ffffff;
-  --muted: rgba(255, 255, 255, 0.8);
-  --border: rgba(255, 255, 255, 0.18);
-  --link: #ffffff;
-  --link-hover: rgba(255, 255, 255, 0.85);
-  --button-bg: #1a1a1a;
+@layer base {
+  :root {
+    --bg: #000000;
+    --text: #ffffff;
+    --muted: rgba(255, 255, 255, 0.8);
+    --border: rgba(255, 255, 255, 0.18);
+    --link: #ffffff;
+    --link-hover: rgba(255, 255, 255, 0.85);
+    --button-bg: #1a1a1a;
+    color-scheme: dark;
+  }
 
-  color-scheme: dark;
-  color: var(--text);
-  background-color: var(--bg);
+  html {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    @apply m-0 min-w-80 min-h-screen;
+  }
 
-a {
-  font-weight: 500;
-  color: var(--link);
-  text-decoration: inherit;
-}
-a:hover {
-  color: var(--link-hover);
-}
+  html[data-theme="light"] {
+    color-scheme: light;
+    --bg: #ffffff;
+    --text: #213547;
+    --muted: #666;
+    --border: #eee;
+    --link: #646cff;
+    --link-hover: #535bf2;
+    --button-bg: #f9f9f9;
+  }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: var(--bg);
-  color: var(--text);
-  
-  caret-color: transparent;
-}
+  html[data-theme="high-contrast"] {
+    color-scheme: dark;
+    --bg: #000000;
+    --text: #ffff00;
+    --muted: #ffff00;
+    --border: #ffff00;
+    --link: #00ffff;
+    --link-hover: #7fffd4;
+    --button-bg: #000000;
+  }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  html[data-theme="high-contrast"] img {
+    filter: contrast(200%) brightness(110%);
+  }
 
+  html[data-theme="sepia"] {
+    color-scheme: light;
+    --bg: #f4ecd8;
+    --text: #3d2817;
+    --muted: #6b4423;
+    --border: #d4c4a8;
+    --link: #5c3a1f;
+    --link-hover: #3d2817;
+    --button-bg: #e8dcc4;
+  }
 
-/* Manual theme override via html[data-theme] */
-html[data-theme="dark"] {
-  color-scheme: dark;
-}
+  html[data-theme="sepia"] img {
+    filter: sepia(60%) saturate(0.8);
+  }
 
-html[data-theme="light"] {
-  color-scheme: light;
+  html[data-theme="monochrome"] {
+    color-scheme: light;
+    --bg: #ffffff;
+    --text: #000000;
+    --muted: #666666;
+    --border: #cccccc;
+    --link: #000000;
+    --link-hover: #333333;
+    --button-bg: #f5f5f5;
+  }
 
-  --bg: #ffffff;
-  --text: #213547;
-  --muted: #666;
-  --border: #eee;
-  --link: #646cff;
-  --link-hover: #535bf2;
-  --button-bg: #f9f9f9;
-}
-
-html[data-theme="high-contrast"] {
-  color-scheme: dark;
-
-  --bg: #000000;
-  --text: #ffff00;
-  --muted: #ffff00;
-  --border: #ffff00;
-  --link: #00ffff;
-  --link-hover: #7fffd4;
-  --button-bg: #000000;
-}
-
-html[data-theme="high-contrast"] img {
-  filter: contrast(200%) brightness(110%);
-}
-
-html[data-theme="sepia"] {
-  color-scheme: light;
-
-  --bg: #f4ecd8;
-  --text: #3d2817;
-  --muted: #6b4423;
-  --border: #d4c4a8;
-  --link: #5c3a1f;
-  --link-hover: #3d2817;
-  --button-bg: #e8dcc4;
-}
-
-html[data-theme="sepia"] img {
-  filter: sepia(60%) saturate(0.8);
-}
-
-html[data-theme="monochrome"] {
-  color-scheme: light;
-
-  --bg: #ffffff;
-  --text: #000000;
-  --muted: #666666;
-  --border: #cccccc;
-  --link: #000000;
-  --link-hover: #333333;
-  --button-bg: #f5f5f5;
-}
-
-html[data-theme="monochrome"] img {
-  filter: grayscale(100%);
+  html[data-theme="monochrome"] img {
+    filter: grayscale(100%);
+  }
 }
