@@ -3,13 +3,17 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 export function HomePage() {
   return (
     <div>
-      <header className="homeHeader">
-        <h1>Ryan Duan</h1>
+      <header className="text-center">
+        <h1 className="m-0">Ryan Duan</h1>
 
-        <h2>Software Engineer</h2>
+        <h2 className="m-0">Software Engineer</h2>
 
-        <nav className="links" aria-label="Profile links">
+        <nav
+          className="mt-0.5 flex gap-1.5 flex-wrap items-center justify-center"
+          aria-label="Profile links"
+        >
           <a
+            className="inline-flex items-center justify-center text-[28px] leading-none no-underline hover:underline"
             aria-label="GitHub"
             href="https://github.com/ryanduan02"
             target="_blank"
@@ -18,6 +22,7 @@ export function HomePage() {
             <FaGithub />
           </a>
           <a
+            className="inline-flex items-center justify-center text-[28px] leading-none no-underline hover:underline"
             aria-label="LinkedIn"
             href="https://www.linkedin.com/in/ryanduan/"
             target="_blank"
@@ -26,6 +31,7 @@ export function HomePage() {
             <FaLinkedin />
           </a>
           <a
+            className="inline-flex items-center justify-center text-[28px] leading-none no-underline hover:underline"
             aria-label="Email"
             href="mailto:ryanduan02+website@gmail.com"
             target="_blank"
@@ -36,21 +42,21 @@ export function HomePage() {
         </nav>
       </header>
 
-      <div className="contentWrapper">
+      <div className="flex flex-col gap-8 mt-3.5 mx-auto items-stretch max-w-[760px] max-sm:gap-4">
         <a
-          className="profilePhotoLink"
+          className="inline-block mx-auto"
           href={`${import.meta.env.BASE_URL}img.jpg`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open full-size profile photo"
         >
           <img
-            className="profilePhoto"
+            className="w-[300px] h-auto rounded-2xl shrink-0 mx-auto block max-sm:w-full max-sm:max-w-[360px]"
             src={`${import.meta.env.BASE_URL}img.jpg`}
             alt="Photo of Ryan Duan"
           />
         </a>
-        <section className="about">
+        <section className="flex-1 text-center max-w-[600px] mx-auto">
           <p>
             I'm a Software Engineer at Amazon in New York, where I build and
             scale customer facing systems. Most recently, I worked on the
@@ -80,18 +86,23 @@ export function HomePage() {
         </section>
       </div>
 
-      <div className="sectionDivider" aria-hidden="true" />
+      <div
+        className="h-px max-w-[520px] my-8 mx-auto bg-gradient-to-r from-transparent via-text to-transparent"
+        aria-hidden="true"
+      />
 
-      <aside className="resume" aria-label="Resume">
-        <h3>Experience</h3>
+      <aside className="mt-6 max-w-[600px] mx-auto" aria-label="Resume">
+        <h3 className="mb-3 text-center">Experience</h3>
 
-        <div className="resumeItem">
-          <div className="jobHeader">
-            <div className="jobTitle">Software Engineer</div>
-            <div className="jobMeta">New York, NY</div>
-            <div className="jobMeta">August 2025 - Current</div>
+        <div className="mb-4 pb-2 border-b border-border">
+          <div className="flex justify-between gap-3 items-baseline max-sm:flex-wrap max-sm:justify-start">
+            <div className="font-semibold">Software Engineer</div>
+            <div className="text-muted text-[0.9rem]">New York, NY</div>
+            <div className="text-muted text-[0.9rem]">
+              August 2025 - Current
+            </div>
           </div>
-          <p>
+          <p className="text-center">
             I built and maintained backend components powering Amazon's
             AI-driven{" "}
             <a
@@ -108,13 +119,15 @@ export function HomePage() {
           </p>
         </div>
 
-        <div className="resumeItem">
-          <div className="jobHeader">
-            <div className="jobTitle">Software Engineer Intern</div>
-            <div className="jobMeta">New York, NY</div>
-            <div className="jobMeta">May 2024 - August 2024</div>
+        <div className="mb-4 pb-2 border-b border-border">
+          <div className="flex justify-between gap-3 items-baseline max-sm:flex-wrap max-sm:justify-start">
+            <div className="font-semibold">Software Engineer Intern</div>
+            <div className="text-muted text-[0.9rem]">New York, NY</div>
+            <div className="text-muted text-[0.9rem]">
+              May 2024 - August 2024
+            </div>
           </div>
-          <p>
+          <p className="text-center">
             Designed and built a document migration engine to automatically
             convert OpenXML contract templates into JavaScript-compatible
             formats, dramatically reducing manual migration work and
@@ -122,13 +135,15 @@ export function HomePage() {
           </p>
         </div>
 
-        <div className="resumeItem">
-          <div className="jobHeader">
-            <div className="jobTitle">Software Engineer Intern</div>
-            <div className="jobMeta">Pittsburgh, PA</div>
-            <div className="jobMeta">June 2023 - August 2023</div>
+        <div className="mb-4 pb-2 border-b border-border">
+          <div className="flex justify-between gap-3 items-baseline max-sm:flex-wrap max-sm:justify-start">
+            <div className="font-semibold">Software Engineer Intern</div>
+            <div className="text-muted text-[0.9rem]">Pittsburgh, PA</div>
+            <div className="text-muted text-[0.9rem]">
+              June 2023 - August 2023
+            </div>
           </div>
-          <p>
+          <p className="text-center">
             Interned on the Corporate Risk Technology team to modernize and
             automate a critical capital analysis and reporting tool,
             significantly reducing manual work while improving efficiency,
@@ -136,13 +151,15 @@ export function HomePage() {
           </p>
         </div>
 
-        <div className="resumeItem">
-          <div className="jobHeader">
-            <div className="jobTitle">Teaching Assistant</div>
-            <div className="jobMeta">Pittsburgh, PA</div>
-            <div className="jobMeta">August 2022 - May 2025</div>
+        <div className="mb-4 pb-2 border-b border-border">
+          <div className="flex justify-between gap-3 items-baseline max-sm:flex-wrap max-sm:justify-start">
+            <div className="font-semibold">Teaching Assistant</div>
+            <div className="text-muted text-[0.9rem]">Pittsburgh, PA</div>
+            <div className="text-muted text-[0.9rem]">
+              August 2022 - May 2025
+            </div>
           </div>
-          <p>
+          <p className="text-center">
             Led recitations, office hours and graded assignments and exams for
             50 to 150 students across core Math and Computer Science courses:
             calculus, linear algebra, probability. Helped grade, lead
@@ -151,13 +168,14 @@ export function HomePage() {
           </p>
         </div>
 
-        <div className="fullResumeLink">
+        <div className="mt-4 pt-3 border-t border-border text-center">
           <a
+            className="text-link no-underline inline-block hover:underline"
             href="/Ryan_Duan_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h4>
+            <h4 className="m-0 mb-2 text-[0.95rem] tracking-wide">
               <u>Full resume</u>
             </h4>
           </a>
