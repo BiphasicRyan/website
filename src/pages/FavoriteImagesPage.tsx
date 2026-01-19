@@ -2,13 +2,16 @@ import { favoriteImages } from "../favorite-images/images";
 
 export function FavoriteImagesPage() {
   return (
-    <section className="favorite-images" aria-label="Favorite Images">
+    <section className="text-center" aria-label="Favorite Images">
       <h3>These are images I come back to for sentimentality</h3>
-      <div className="imageGallery">
+      <div className="flex flex-wrap gap-4 mt-4">
         {favoriteImages.map((image) => (
-          <figure key={image.src} className="galleryItem">
+          <figure
+            key={image.src}
+            className="m-0 flex flex-col w-[calc(33.33%-11px)] max-[900px]:w-[calc(50%-8px)] max-sm:w-full"
+          >
             <a
-              className="galleryImageButton"
+              className="p-0 border-0 bg-transparent cursor-pointer"
               href={`${import.meta.env.BASE_URL}favorite-images/${image.src}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -17,7 +20,7 @@ export function FavoriteImagesPage() {
               <img
                 src={`${import.meta.env.BASE_URL}favorite-images/${image.src}`}
                 alt={image.alt}
-                className="galleryImage"
+                className="w-full h-[400px] object-cover rounded-lg max-[900px]:h-[320px] max-sm:h-auto max-sm:object-contain"
               />
             </a>
             {image.description &&
@@ -28,17 +31,20 @@ export function FavoriteImagesPage() {
 
                 if (!caption) {
                   return (
-                    <figcaption className="imageDescription">
+                    <figcaption className="mt-2 text-[0.9rem] text-muted text-center whitespace-pre-line">
                       {image.description}
                     </figcaption>
                   );
                 }
 
                 return (
-                  <figcaption className="imageDescription">
-                    <span className="imageLocation">{location}</span>
-                    <span className="imageCaptionDivider" aria-hidden="true" />
-                    <span className="imageCaption">{caption}</span>
+                  <figcaption className="mt-2 text-[0.9rem] text-muted text-center whitespace-pre-line">
+                    <span className="text-muted">{location}</span>
+                    <span
+                      className="block w-[min(260px,70%)] h-px my-1.5 mx-auto bg-border opacity-70"
+                      aria-hidden="true"
+                    />
+                    <span className="text-muted">{caption}</span>
                   </figcaption>
                 );
               })()}
