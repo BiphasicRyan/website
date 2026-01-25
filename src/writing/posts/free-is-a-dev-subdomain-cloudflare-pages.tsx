@@ -5,6 +5,7 @@ export const freeIsADevSubdomainCloudflarePages: Writing = {
 	title: "A simple way you can the (sub)domain you want for free",
 	date: "2025-12-22",
 	content: (
+		/*
 		<>
 			<p>
 				This piece documents the full process of getting a free custom subdomain
@@ -164,7 +165,10 @@ export const freeIsADevSubdomainCloudflarePages: Writing = {
 				hours. During this time, DNS propagates globally.
 			</p>
 
-			<p>Now you have your domain!</p>
+			<p>Now you have your domain!</p> 
+		</>
+		*/
+		<>
 		</>
 	),
 };
