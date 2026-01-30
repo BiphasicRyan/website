@@ -19,14 +19,14 @@ export function WritingPage() {
 
   const activePost = React.useMemo(
     () => posts.find((p) => p.slug === activeSlug) ?? null,
-    [posts, activeSlug]
+    [posts, activeSlug],
   );
 
   const handlePostClick = React.useCallback(
     (slug: string) => {
       navigate(`/writing/${slug}`);
     },
-    [navigate]
+    [navigate],
   );
 
   const handleBackClick = React.useCallback(() => {
@@ -45,13 +45,17 @@ export function WritingPage() {
         </button>
 
         <header className="text-center mt-4">
-          <h3 className="m-0">{activePost.title}</h3>
+          <h3 className="m-0 text-3xl font-bold">{activePost.title}</h3>
           {activePost.date ? (
-            <div className="text-muted text-[0.9rem]">{activePost.date}</div>
+            <div className="text-muted text-[0.9rem] mt-2">
+              {activePost.date}
+            </div>
           ) : null}
         </header>
 
-        <article className="text-left mt-4">{activePost.content}</article>
+        <article className="prose text-left mt-4 max-w-[760px] mx-auto">
+          {activePost.content}
+        </article>
       </section>
     );
   }

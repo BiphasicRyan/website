@@ -87,3 +87,63 @@
     filter: grayscale(100%);
   }
 }
+
+/* Article/prose styling for writing posts */
+@layer components {
+  .prose {
+    @apply leading-relaxed;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
+  .prose h4 {
+    @apply text-xl font-bold mt-8 mb-4;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply pl-6 mb-4;
+  }
+
+  .prose ul {
+    @apply list-disc;
+  }
+
+  .prose ol {
+    @apply list-decimal;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-border pl-4 my-4 italic text-muted;
+  }
+
+  .prose pre {
+    @apply bg-button-bg rounded-lg p-4 overflow-x-auto my-4;
+  }
+
+  .prose code {
+    @apply bg-button-bg px-1.5 py-0.5 rounded text-sm;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .prose a {
+    @apply text-link hover:text-link-hover underline;
+  }
+
+  .prose strong {
+    @apply font-bold;
+  }
+
+  .prose em {
+    @apply italic;
+  }
+}

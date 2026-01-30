@@ -5,7 +5,6 @@ export const freeIsADevSubdomainCloudflarePages: Writing = {
 	title: "A simple way you can the (sub)domain you want for free",
 	date: "2025-12-22",
 	content: (
-		/*
 		<>
 			<p>
 				This piece documents the full process of getting a free custom subdomain
@@ -51,7 +50,7 @@ export const freeIsADevSubdomainCloudflarePages: Writing = {
 
 			<blockquote>
 				<p>
-					<strong>Why this matters:</strong> The <em>is-a.dev project</em> rejects
+					The <em>is-a.dev project</em> rejects
 					CNAMEs that point to Cloudflare Tunnels (<code>*.cfargotunnel.com</code>
 					), self-hosted IPs without a stable hostname, and placeholder or
 					loopback domains. They want a legitimate public endpoint.
@@ -86,9 +85,7 @@ export const freeIsADevSubdomainCloudflarePages: Writing = {
 				<li>CI validates ownership, DNS safety, and abuse prevention.</li>
 				<li>Maintainers manually review and merge.</li>
 				<li>Create the domain file.</li>
-				<li>
-					In your fork of the repo, add your JSON. For me, it was:
-				</li>
+				<li>In your fork of the repo, add your JSON. For me, it was:</li>
 			</ol>
 
 			<pre>
@@ -121,7 +118,7 @@ export const freeIsADevSubdomainCloudflarePages: Writing = {
 				<li>
 					Send your pull request ID into the pull-request channel of the{" "}
 					<a
-						href="https://discord.gg/p9gYaPC8"
+						href="https://discord.com/invite/is-a-dev-830872854677422150"
 						target="_blank"
 						rel="noreferrer"
 					>
@@ -165,10 +162,7 @@ export const freeIsADevSubdomainCloudflarePages: Writing = {
 				hours. During this time, DNS propagates globally.
 			</p>
 
-			<p>Now you have your domain!</p> 
-		</>
-		*/
-		<>
+			<p>Now you have your domain!</p>
 		</>
 	),
 };
