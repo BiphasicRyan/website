@@ -9,14 +9,14 @@ export const favoriteImages: FavoriteImage[] = [
     // photo source: https://pixabay.com/photos/new-york-432-park-avenue-city-6750363/
   },
   {
-    src: "rcp.jpeg",
+    src: "Rcp.jpeg",
     alt: "RCP",
     description:
       "Lawence, Kansas - Sports Pavillion Lawrence\nCalm snowy night after the gym",
     // photo source: taken by me
   },
   {
-    src: "the edge.jpeg",
+    src: "The Edge.jpeg",
     alt: "The Edge",
     description: "NYC, The Edge\nThe best view in Manhattan",
     // photo source: taken by me
