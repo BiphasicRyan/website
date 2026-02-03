@@ -35,4 +35,11 @@ export const favoriteImages: FavoriteImage[] = [
       "NYC, West 30th Street\nA morning so ethereal it can't be captured by a camera",
     // photo source: taken by me
   },
+  {
+    src: "Lower Montauk Cutoff.jpg",
+    alt: "Lower Montauk Cutoff",
+    description:
+      "NYC, Lower Montauk Cutoff\nOne of my favorite abandoned railways",
+    // photo source: taken by me 
+  }
 ];
