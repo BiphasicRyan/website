@@ -12,13 +12,13 @@ export function FavoriteImagesPage() {
           >
             <a
               className="p-0 border-0 bg-transparent cursor-pointer"
-              href={`${import.meta.env.BASE_URL}favorite-images/${image.src}`}
+              href={`${import.meta.env.BASE_URL}favorite-images/processed/${image.src}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Open image in new tab: ${image.alt}`}
             >
               <img
-                src={`${import.meta.env.BASE_URL}favorite-images/${image.src}`}
+                src={`${import.meta.env.BASE_URL}favorite-images/processed/${image.src}`}
                 alt={image.alt}
                 className="w-full h-[400px] object-cover rounded-lg max-[900px]:h-[320px] max-sm:h-auto max-sm:object-contain"
               />
