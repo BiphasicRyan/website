@@ -2,13 +2,6 @@ import type { FavoriteImage } from "../types/favoriteImage";
 
 export const favoriteImages: FavoriteImage[] = [
   {
-    src: "432 Park Avenue.jpg",
-    alt: "432 Park Avenue",
-    description:
-      "NYC, 432 Park Avenue\nThe most beautiful skyscraper in the city",
-    // photo source: https://pixabay.com/photos/new-york-432-park-avenue-city-6750363/
-  },
-  {
     src: "Rcp.jpeg",
     alt: "RCP",
     description:
